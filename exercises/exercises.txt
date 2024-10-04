@@ -1,0 +1,38 @@
+1
+Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included).  The numbers obtained should be printed in a comma-separated sequence on a single line.
+//solution
+func ex001(low int,high int)string{
+	var result []string
+
+	for i := low; i <= high; i++ {
+		if(i%7==0&&i%5!=0){
+			result = append(result, strconv.Itoa(i))
+		}
+	}
+
+
+	return strings.Join(result,",")
+}
+2
+Write a program which can compute the factorial of a given numbers. The results should be printed in a comma-separated sequence on a single line.
+
+Suppose the following input is supplied to the program: 8
+Then, the output should be: 40320
+solution
+
+func computeFact(given int)(uint64,error){
+	var result  uint64= 1
+
+	if(given<=0){
+		return 0,fmt.Errorf("Error")
+	}
+
+	if given==1{
+		return 1,nil
+	}
+	for i := 1; i <=given; i++ {
+		result*=uint64(i)
+	}
+
+	return result,nil
+}
