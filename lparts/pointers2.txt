@@ -1,0 +1,29 @@
+	var a int = 5748
+     
+
+   var b = &a;
+
+	var z = *b;
+	
+    fmt.Println(a) // show the value of variable
+    fmt.Println(b) // show the memory address of variable a
+    fmt.Println(z) // show the value of memory address that dedicated to variable a
+
+
+//how to modified variable through pointers
+func main() {
+
+	a := "hello"
+	fmt.Println("Before:",a)
+	modString(&a)
+	fmt.Println("After:",a)
+}
+
+func modString(a *string) {
+	
+	*a = "modified"
+}
+
+
+
+// https://www.youtube.com/watch?v=PR4BwsZaJY0
