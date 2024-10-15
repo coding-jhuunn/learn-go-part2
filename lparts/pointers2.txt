@@ -2,6 +2,7 @@
      
 
    var b = &a;
+   
 
 	var z = *b;
 	

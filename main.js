@@ -1,8 +1,10 @@
 let hello = "a";
 
-const modified = (letter) => {
-  letter = "b";
-  return letter;
+const modified = (hello) => {
+  hello = "b";
+  return;
 };
 
-console.log(modified(hello));
+console.log(hello);
+modified(hello);
+console.log(hello);
